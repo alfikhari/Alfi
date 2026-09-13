@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Order Otomatis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .order-container {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #38bdf8;
+            box-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+<div class="order-container">
+    <h2>Form Order Instan</h2>
+    <p class="subtitle">Isi data di bawah untuk melakukan pemesanan</p>
+    
+    <!-- GANTI 'email-anda@gmail.com' dengan email aktif Anda -->
+    <form action="https://formsubmit.co" method="POST">
+        
+        <!-- Halaman Dialihkan Setelah Order Sukses -->
+        <input type="hidden" name="_next" value="https://github.io">
+        <!-- Menghilangkan Captcha Agar Pembeli Tidak Ribet -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="Nama" placeholder="Masukkan nama Anda" required>
+        </div>
+
+        <div class="form-group">
+            <label for="whatsapp">Nomor WhatsApp</label>
+            <input type="tel" id="whatsapp" name="WhatsApp" placeholder="Contoh: 08123456xxx" required>
+        </div>
+
+        <div class="form-group">
+            <label for="produk">Pilih Produk</label>
+            <select id="produk" name="Produk Opsi" required>
+                <option value="">-- Pilih Layanan/Produk --</option>
+                <option value="Paket Pemula">Paket Pemula - Rp 50.000</option>
+                <option value="Paket Bisnis">Paket Bisnis - Rp 150.000</option>
+                <option value="Paket Pro">Paket Pro - Rp 300.000</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="catatan">Alamat / Catatan Tambahan</label>
+            <textarea id="catatan" name="Catatan Pembeli" rows="3" placeholder="Tulis alamat lengkap pengiriman atau catatan khusus"></textarea>
+        </div>
+
+        <button type="submit">Kirim Pesanan Sekarang</button>
+    </form>
+</div>
+
+</body>
+  </html>
+  
