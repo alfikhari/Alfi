@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LanzXytre - Order Web</title>
+    <style>
+        /* Gaya Dasar & Tema Gelap (Dark Mode) Terinspirasi dari Aplikasi Chat */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b141a;
+            color: #e9edef;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #111b21;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            padding: 24px;
+            box-sizing: border-box;
+            border: 1px solid #222e35;
+        }
+
+        /* Profil / Identitas Pemilik */
+        .profile-section {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #222e35;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .profile-role {
+            font-size: 13px;
+            color: #00a884;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+        }
+
+        /* Tombol Kontak WhatsApp di Profil */
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25d366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn-wa:hover {
+            background-color: #20ba5a;
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: #e9edef;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Desain Box Section untuk Link & Tombol */
+        .card-section {
+            background-color: #202c33;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            border-left: 4px solid #00a884;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #8696a0;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        /* Tampilan Harga Product */
+        .card-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffb703;
+            margin-bottom: 12px;
+        }
+
+        /* Tombol Aksi Utama */
+        .btn-order {
+            display: block;
+            background-color: #00a884;
+            color: #ffffff;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 15px;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .btn-order:hover {
+            background-color: #008f72;
+        }
+
+        .btn-order:active {
+            transform: scale(0.98);
+        }
+
+        /* Tombol khusus Tutorial */
+        .btn-tutorial {
+            background-color: #34b7f1;
+        }
+        .btn-tutorial:hover {
+            background-color: #1da1db;
+        }
+        .tutorial-section {
+            border-left-color: #34b7f1;
+        }
+
+        /* Area Tampilan QRIS */
+        .qris-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #202c33;
+            border-radius: 8px;
+        }
+
+        .qris-image {
+            width: 200px;
+            height: 200px;
+            background-color: #ffffff;
+            margin: 0 auto 12px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .qris-image img {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;
+        }
+
+        /* Box Catatan Kaki / Perhatian */
+        .notice-box {
+            background-color: #182229;
+            border: 1px dashed #3b4a54;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .notice-item {
+            font-size: 13px;
+            color: #d1d7db;
+            margin: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Bagian Profil CEO dengan Kontak WA -->
+    <div class="profile-section">
+        <h1 class="profile-name">Alfi</h1>
+        <div class="profile-role">👑 CEO LanzXytre</div>
+        <a class="btn-wa" href="https://wa.me" target="_blank">
+            💬 Hubungi WhatsApp
+        </a>
+    </div>
+
+    <div class="header-title">
+        ⬇️ DONE TESTI PLP PROJECT ⬇️
+    </div>
+
+    <!-- Pilihan Order 1 -->
+    <div class="card-section">
+        <div class="card-title">LUTBOTZ</div>
+        <div class="card-price">Rp 20.000</div>
+        <a class="btn-order" href="https://github.io" target="_blank">
+            Buka Link Spacecrash
+        </a>
+    </div>
+
+    <!-- Pilihan Order 2 -->
+    <div class="card-section">
+        <div class="card-title">PLP PROJECT</div>
+        <div class="card-price">Rp 20.000</div>
+        <a class="btn-order" href="https://github.io" target="_blank">
+            Buka Link PLP Project
+        </a>
+    </div>
+
+    <!-- Area QRIS Pembayaran -->
+    <div class="qris-container">
+        <div class="card-title" style="margin-bottom: 4px;">Scan QRIS Pembayaran</div>
+        <div class="card-price" style="margin-bottom: 12px;">Total: Rp 20.000</div>
+        <div class="qris-image">
+            <!-- PENTING: Ganti 'qris-kamu.png' dengan file gambar QRIS asli milik Anda -->
+            <img src="qris-kamu.png" alt="QRIS Code">
+        </div>
+    </div>
+
+    <!-- Catatan Penting -->
+    <div class="notice-box">
+        <div class="notice-item">⚠️ Kalo GK bisa scan Tinggal spam scan</div>
+        <div class="notice-item">📸 GK bisa simpan qris tinggal ss</div>
+    </div>
+
+    <!-- Tutorial Order -->
+    <div class="card-section tutorial-section">
+        <div class="card-title">Cara Pemesanan</div>
+        <a class="btn-order btn-tutorial" href="https://vt.tiktok.com/ZSX7Ju15x/" target="_blank">
+            🎬 Tonton Tutorial Order
+        </a>
+    </div>
+</div>
+
+</body>
+      </html>
+  
